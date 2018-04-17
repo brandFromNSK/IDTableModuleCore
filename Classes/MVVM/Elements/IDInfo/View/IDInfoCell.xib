@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="IDInfoCell" rowHeight="68" id="KGk-i7-Jjw" customClass="IDInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="304" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="304" height="67.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lO-Zu-QHQ">
+                        <rect key="frame" x="16" y="8" width="272" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7K-vI-5kW">
+                        <rect key="frame" x="16" y="35.5" width="272" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="e7K-vI-5kW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="0dO-ZT-5cA"/>
+                    <constraint firstItem="2lO-Zu-QHQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Akg-Js-ETx"/>
+                    <constraint firstAttribute="trailing" secondItem="e7K-vI-5kW" secondAttribute="trailing" constant="16" id="IkP-XB-vQb"/>
+                    <constraint firstAttribute="bottom" secondItem="e7K-vI-5kW" secondAttribute="bottom" constant="8" id="Tpd-MJ-ag5"/>
+                    <constraint firstItem="2lO-Zu-QHQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="bWR-fP-9Rp"/>
+                    <constraint firstAttribute="trailing" secondItem="2lO-Zu-QHQ" secondAttribute="trailing" constant="16" id="nE7-Cq-gkG"/>
+                    <constraint firstItem="e7K-vI-5kW" firstAttribute="top" secondItem="2lO-Zu-QHQ" secondAttribute="bottom" constant="8" id="oWf-iP-F48"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="e7K-vI-5kW" id="xJk-8d-FgZ"/>
+                <outlet property="titleLabel" destination="2lO-Zu-QHQ" id="5aR-RJ-MhA"/>
+            </connections>
+            <point key="canvasLocation" x="70" y="77"/>
+        </tableViewCell>
+    </objects>
+</document>
