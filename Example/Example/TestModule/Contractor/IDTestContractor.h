@@ -6,10 +6,8 @@
 //  Copyright © 2018 Improve Digital. All rights reserved.
 //
 
-
-#import "IDMVVMTableContractor.h"
+#import "IDTableModuleCoreMVVM.h"
 @class IDTestViewModel;
-
 
 @interface IDTestContractor : IDMVVMTableContractor <IDMVVMTableContractorProtocol>
 

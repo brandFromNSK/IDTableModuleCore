@@ -3,7 +3,6 @@
 // Copyright (c) 2017 Improve Digital. All rights reserved.
 //
 
-
 #import "IDCellViewModel.h"
 
 @implementation IDCellViewModel
@@ -15,10 +14,16 @@
     return self;
 }
 
+#pragma mark - IDCellViewModelProtocol
 - (NSString *)cellIdentifier {
 
     NSAssert(NO, @"You must override this method in child");
     return nil;
 }
+
+#pragma mark - IDCellViewModelConfigurationProtocol
+@synthesize bottomSeparatorConfig = _bottomSeparatorConfig;
+@synthesize topSeparatorConfig = _topSeparatorConfig;
+
 
 @end

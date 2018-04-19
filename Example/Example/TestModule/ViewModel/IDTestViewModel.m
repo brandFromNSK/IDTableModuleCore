@@ -20,4 +20,13 @@
     self.cellViewModels = [self.factory elementViewModels];
 }
 
+#pragma mark - IDEntryFieldCellViewModelDelegate
+- (void)viewModel:(IDEntryFieldCellViewModel *)viewModel
+   didChangeValue:(NSString *)value
+         rawValue:(NSString *)rawValue
+      withKeyPath:(NSString *)keyPath {
+    
+    [self setValue:rawValue forKeyPath:keyPath];
+}
+
 @end

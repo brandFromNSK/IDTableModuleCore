@@ -18,6 +18,7 @@ typedef enum : NSUInteger {
 
 + (instancetype)trigger;
 - (instancetype)withAction: (IDCellAction)action atRow: (NSInteger)row;
+- (instancetype)withAction: (IDCellAction)action atIndexPaths: (NSArray <NSIndexPath *>*)indexPaths;
 
 - (NSArray <NSIndexPath *> *)indexPathsWithAction: (IDCellAction)action;
 

@@ -4,8 +4,9 @@
 //
 
 #import "IDCellViewModelProtocol.h"
+#import "IDCellViewModelConfigurationProtocol.h"
 
-@interface IDCellViewModel : NSObject <IDCellViewModelProtocol>
+@interface IDCellViewModel : NSObject <IDCellViewModelProtocol, IDCellViewModelConfigurationProtocol>
 
 - (instancetype)init NS_DESIGNATED_INITIALIZER;
 

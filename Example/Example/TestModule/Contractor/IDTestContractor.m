@@ -9,9 +9,8 @@
 
 #import "IDTestContractor.h"
 #import "IDTestViewModel.h"
-#import "IDCellViewModelProtocol.h"
-#import "IDTableViewCell.h"
 
+#import "IDTableModuleCoreMVVM.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 
 

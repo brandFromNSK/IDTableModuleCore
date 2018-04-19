@@ -43,6 +43,8 @@
 		551F0DA820860D4800F3A443 /* IDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551F0D9F20860D4800F3A443 /* IDTestViewController.m */; };
 		551F0DAB20860D6C00F3A443 /* IDTestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551F0DAA20860D6C00F3A443 /* IDTestViewController.storyboard */; };
 		554DEEDB20861080004EA4B4 /* IDPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 554DEEDA20861080004EA4B4 /* IDPerson.m */; };
+		55DFDFF82088805F00C42170 /* IDCellViewModelSeparatorCongfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DFDFF72088805F00C42170 /* IDCellViewModelSeparatorCongfigurator.m */; };
+		55DFE0002088A02800C42170 /* IDMutableSectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DFDFFF2088A02800C42170 /* IDMutableSectionViewModel.m */; };
 		B40BE39F0C23096FA9A32928 /* libPods-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39802105A34605F3F4EE6714 /* libPods-Example.a */; };
 /* End PBXBuildFile section */
 
@@ -103,7 +105,6 @@
 		551F0D4E208606AF00F3A443 /* IDEntryFieldValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDEntryFieldValidation.h; sourceTree = "<group>"; };
 		551F0D4F208606AF00F3A443 /* IDEntryTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDEntryTextView.m; sourceTree = "<group>"; };
 		551F0D5A208606AF00F3A443 /* IDMVVMTableContractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDMVVMTableContractor.h; sourceTree = "<group>"; };
-		551F0D5B208606AF00F3A443 /* IDMVVMTableViewCellUpdateType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDMVVMTableViewCellUpdateType.h; sourceTree = "<group>"; };
 		551F0D5C208606AF00F3A443 /* IDMVVMTableContractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDMVVMTableContractor.m; sourceTree = "<group>"; };
 		551F0D5D208606AF00F3A443 /* IDMVVMTableContractorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDMVVMTableContractorProtocol.h; sourceTree = "<group>"; };
 		551F0D852086093400F3A443 /* NSString+TextDirectionality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TextDirectionality.m"; sourceTree = "<group>"; };
@@ -125,6 +126,13 @@
 		551F0DAA20860D6C00F3A443 /* IDTestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IDTestViewController.storyboard; sourceTree = "<group>"; };
 		554DEED920861080004EA4B4 /* IDPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDPerson.h; sourceTree = "<group>"; };
 		554DEEDA20861080004EA4B4 /* IDPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDPerson.m; sourceTree = "<group>"; };
+		55DFDFD92087415F00C42170 /* IDTableModuleCoreMVVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDTableModuleCoreMVVM.h; sourceTree = "<group>"; };
+		55DFDFF62088805F00C42170 /* IDCellViewModelSeparatorCongfigurator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDCellViewModelSeparatorCongfigurator.h; sourceTree = "<group>"; };
+		55DFDFF72088805F00C42170 /* IDCellViewModelSeparatorCongfigurator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDCellViewModelSeparatorCongfigurator.m; sourceTree = "<group>"; };
+		55DFDFF9208888A600C42170 /* IDCellViewModelConfigurationProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDCellViewModelConfigurationProtocol.h; sourceTree = "<group>"; };
+		55DFDFFE2088A02800C42170 /* IDMutableSectionViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDMutableSectionViewModel.h; sourceTree = "<group>"; };
+		55DFDFFF2088A02800C42170 /* IDMutableSectionViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDMutableSectionViewModel.m; sourceTree = "<group>"; };
+		55DFE0012088A04F00C42170 /* IDMutableSectionCellViewModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDMutableSectionCellViewModelProtocol.h; sourceTree = "<group>"; };
 		7BE3B766CF920ADC22DAD3A0 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D4664BBF9AE46B84EDCA5C7B /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,7 +196,9 @@
 		551F0CEE2086066200F3A443 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				55DFDFD92087415F00C42170 /* IDTableModuleCoreMVVM.h */,
 				551F0D842086093400F3A443 /* JVFloatLabeledTextField_v1.2.1 */,
+				551F0D8E208609FF00F3A443 /* Categories */,
 				551F0CEF208606AF00F3A443 /* MVVM */,
 			);
 			name = Classes;
@@ -198,7 +208,7 @@
 		551F0CEF208606AF00F3A443 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				551F0D8E208609FF00F3A443 /* Categories */,
+				551F0CF9208606AF00F3A443 /* Categories */,
 				551F0CF0208606AF00F3A443 /* IDMVVMElementCellModule */,
 				551F0D04208606AF00F3A443 /* IDCellActionTrigger */,
 				551F0D07208606AF00F3A443 /* Elements */,
@@ -210,6 +220,10 @@
 		551F0CF0208606AF00F3A443 /* IDMVVMElementCellModule */ = {
 			isa = PBXGroup;
 			children = (
+				55DFDFFD2088920F00C42170 /* SectionViewModel */,
+				55DFDFFC208891F700C42170 /* CellViewModel */,
+				55DFDFFA208891AE00C42170 /* Configuration */,
+				55DFDFFB208891D300C42170 /* Protocols */,
 				551F0CF1208606AF00F3A443 /* ViewModel */,
 				551F0D01208606AF00F3A443 /* TableViewCell */,
 			);
@@ -219,15 +233,6 @@
 		551F0CF1208606AF00F3A443 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				551F0CF9208606AF00F3A443 /* Categories */,
-				551F0CF2208606AF00F3A443 /* IDCellViewModelProtocol.h */,
-				551F0CF3208606AF00F3A443 /* IDValidatableCellViewModelProtocol.h */,
-				551F0CF4208606AF00F3A443 /* IDCellViewModel.h */,
-				551F0CF5208606AF00F3A443 /* IDSectionCellViewModelProtocol.h */,
-				551F0CF6208606AF00F3A443 /* IDSectionViewModel.m */,
-				551F0CF7208606AF00F3A443 /* IDCellViewModel.m */,
-				551F0CF8208606AF00F3A443 /* IDUpdatableCellViewModelProtocol.h */,
-				551F0CFD208606AF00F3A443 /* IDSectionViewModel.h */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -290,8 +295,8 @@
 		551F0D09208606AF00F3A443 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				551F0D0A208606AF00F3A443 /* IDEmptyCellViewModel.m */,
 				551F0D0B208606AF00F3A443 /* IDEmptyCellViewModel.h */,
+				551F0D0A208606AF00F3A443 /* IDEmptyCellViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -299,8 +304,8 @@
 		551F0D0C208606AF00F3A443 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				551F0D0D208606AF00F3A443 /* IDEmptyCell.m */,
 				551F0D0E208606AF00F3A443 /* IDEmptyCell.h */,
+				551F0D0D208606AF00F3A443 /* IDEmptyCell.m */,
 				551F0D0F208606AF00F3A443 /* IDEmptyCell.xib */,
 			);
 			path = View;
@@ -374,9 +379,9 @@
 		551F0D3C208606AF00F3A443 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				551F0D3F208606AF00F3A443 /* IDEntryFieldCellFieldModel.h */,
 				551F0D3D208606AF00F3A443 /* IDEntryFieldCellFieldModel.m */,
 				551F0D3E208606AF00F3A443 /* IDEntryFieldCellViewModel.h */,
-				551F0D3F208606AF00F3A443 /* IDEntryFieldCellFieldModel.h */,
 				551F0D40208606AF00F3A443 /* IDEntryFieldCellViewModel.m */,
 			);
 			path = ViewModel;
@@ -385,9 +390,9 @@
 		551F0D41208606AF00F3A443 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				551F0D42208606AF00F3A443 /* IDEntryFieldCellElementsPosition.h */,
 				551F0D43208606AF00F3A443 /* IDEntryFieldCell.h */,
 				551F0D44208606AF00F3A443 /* IDEntryFieldCell.m */,
+				551F0D42208606AF00F3A443 /* IDEntryFieldCellElementsPosition.h */,
 				551F0D45208606AF00F3A443 /* IDEntryFieldCellState.h */,
 				551F0D46208606AF00F3A443 /* Auxiliary */,
 			);
@@ -422,7 +427,6 @@
 			isa = PBXGroup;
 			children = (
 				551F0D5A208606AF00F3A443 /* IDMVVMTableContractor.h */,
-				551F0D5B208606AF00F3A443 /* IDMVVMTableViewCellUpdateType.h */,
 				551F0D5C208606AF00F3A443 /* IDMVVMTableContractor.m */,
 				551F0D5D208606AF00F3A443 /* IDMVVMTableContractorProtocol.h */,
 			);
@@ -498,6 +502,48 @@
 				554DEEDA20861080004EA4B4 /* IDPerson.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		55DFDFFA208891AE00C42170 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				55DFDFF9208888A600C42170 /* IDCellViewModelConfigurationProtocol.h */,
+				55DFDFF62088805F00C42170 /* IDCellViewModelSeparatorCongfigurator.h */,
+				55DFDFF72088805F00C42170 /* IDCellViewModelSeparatorCongfigurator.m */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		55DFDFFB208891D300C42170 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				551F0CF3208606AF00F3A443 /* IDValidatableCellViewModelProtocol.h */,
+				551F0CF8208606AF00F3A443 /* IDUpdatableCellViewModelProtocol.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		55DFDFFC208891F700C42170 /* CellViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				551F0CF4208606AF00F3A443 /* IDCellViewModel.h */,
+				551F0CF7208606AF00F3A443 /* IDCellViewModel.m */,
+				551F0CF2208606AF00F3A443 /* IDCellViewModelProtocol.h */,
+			);
+			path = CellViewModel;
+			sourceTree = "<group>";
+		};
+		55DFDFFD2088920F00C42170 /* SectionViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				551F0CFD208606AF00F3A443 /* IDSectionViewModel.h */,
+				551F0CF6208606AF00F3A443 /* IDSectionViewModel.m */,
+				551F0CF5208606AF00F3A443 /* IDSectionCellViewModelProtocol.h */,
+				55DFDFFE2088A02800C42170 /* IDMutableSectionViewModel.h */,
+				55DFDFFF2088A02800C42170 /* IDMutableSectionViewModel.m */,
+				55DFE0012088A04F00C42170 /* IDMutableSectionCellViewModelProtocol.h */,
+			);
+			path = SectionViewModel;
 			sourceTree = "<group>";
 		};
 		60B25F54650F3AE2C789DF5A /* Frameworks */ = {
@@ -604,8 +650,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55DFE0002088A02800C42170 /* IDMutableSectionViewModel.m in Sources */,
 				551F0D6E208606AF00F3A443 /* IDRightSideDescriptionCellViewModel.m in Sources */,
 				551F0DA520860D4800F3A443 /* IDTestViewModel.m in Sources */,
+				55DFDFF82088805F00C42170 /* IDCellViewModelSeparatorCongfigurator.m in Sources */,
 				551F0D70208606AF00F3A443 /* IDRightSideDescriptionCell.m in Sources */,
 				551F0D6D208606AF00F3A443 /* IDInfoCell.m in Sources */,
 				551F0D9120860A0B00F3A443 /* NSString+Additions.m in Sources */,

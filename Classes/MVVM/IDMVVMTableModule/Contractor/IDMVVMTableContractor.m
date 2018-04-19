@@ -7,7 +7,6 @@
 #import "IDMVVMTableContractor.h"
 
 #import "IDTableViewCell.h"
-#import "IDMVVMTableViewCellUpdateType.h"
 
 #import "IDSectionCellViewModelProtocol.h"
 
@@ -194,58 +193,6 @@ static const CGFloat kUITableViewDefaultRowHeight = 44.0f;
     }
 }
 
-- (void)updateTableViewWithTuples: (NSArray<RACTuple *> *)tuples {
-
-    dispatch_async(dispatch_get_main_queue(), ^{
-
-        [self.tableView beginUpdates];
-        for( RACTuple *tuple in tuples ) {
-            [self updateTableCellsViewWithTuple:tuple];
-        }
-        [self.tableView endUpdates];
-
-        [self.tableView beginUpdates];
-        [self.tableView endUpdates];
-    });
-}
-
-- (void)updateTableViewWithTuple: (RACTuple *)tuple {
-
-    dispatch_async(dispatch_get_main_queue(), ^{
-
-        [self updateTableCellsViewWithTuple:tuple];
-        [self.tableView beginUpdates];
-        [self.tableView endUpdates];
-    });
-}
-
-- (void)updateTableCellsViewWithTuple: (RACTuple *)tuple {
-
-    RACTupleUnpack(NSNumber *type, NSArray <NSIndexPath *> *indexPaths) = tuple;
-
-    if (indexPaths.count == 0) {
-        return;
-    }
-    
-    switch (type.unsignedIntegerValue) {
-        case IDMVVMTableViewCellUpdateTypeInsert: {
-            [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
-            break;
-        }
-        case IDMVVMTableViewCellUpdateTypeRemove: {
-            [self.tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
-            break;
-        }
-        case IDMVVMTableViewCellUpdateTypeUpdate: {
-            [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
-            break;
-        }
-        default: {
-            break;
-        }
-    }
-}
-
 - (void)updateTableViewWithCellViewModels: (NSArray<id<IDCellViewModelProtocol>> *)viewModels {
     
     [self registerReusableCellWithCellViewModels:viewModels];
@@ -289,7 +236,6 @@ static const CGFloat kUITableViewDefaultRowHeight = 44.0f;
         [self.tableView reloadRowsAtIndexPaths:[trigger indexPathsWithAction:IDCellActionUpdate] withRowAnimation:UITableViewRowAnimationFade];
         
         [self.tableView endUpdates];
-        
     });
 }
 

@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IDTableModuleCoreMVVM.h"
 
-@protocol IDCellViewModelProtocol;
 @class IDTestViewModel;
 
 @interface IDTestElementsModuleFactory : NSObject

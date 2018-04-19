@@ -24,21 +24,26 @@
 }
 
 - (instancetype)withAction: (IDCellAction)action atRow: (NSInteger)row {
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+    
+    [self withAction:action atIndexPaths:@[[NSIndexPath indexPathForRow:row inSection:0]]];
+    return self;
+}
+
+- (instancetype)withAction: (IDCellAction)action atIndexPaths: (NSArray <NSIndexPath *>*)indexPaths {
     
     switch (action) {
         case IDCellActionUpdate: {
-            [self.updateIndexPaths addObject:indexPath];
+            [self.updateIndexPaths addObjectsFromArray:indexPaths];
         }
             break;
             
         case IDCellActionInsert: {
-            [self.insertIndexPaths addObject:indexPath];
+            [self.insertIndexPaths addObjectsFromArray:indexPaths];
         }
             break;
             
         case IDCellActionDelete: {
-            [self.deleteIndexPaths addObject:indexPath];    
+            [self.deleteIndexPaths addObjectsFromArray:indexPaths];
         }
             break;
     }

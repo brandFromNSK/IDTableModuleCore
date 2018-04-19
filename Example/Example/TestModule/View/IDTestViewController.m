@@ -20,6 +20,7 @@
     //!!!: Recommended to inject that with DI
     IDTestViewModel *viewModel = [IDTestViewModel new];
     viewModel.factory = [IDTestElementsModuleFactory new];
+    viewModel.factory.viewModel = viewModel;
     viewModel.person = [IDPerson new];
     
     IDTestContractor *contractor = [IDTestContractor new];

@@ -20,8 +20,6 @@
 
 - (void)reloadTableView: (NSNumber *)needReload;
 - (void)updateTableView: (NSNumber *)needUpdate;
-- (void)updateTableViewWithTuple: (RACTuple *)tuple;
-- (void)updateTableViewWithTuples: (NSArray<RACTuple *> *)tuples;
 - (void)updateTableViewWithCellViewModels: (NSArray<id<IDCellViewModelProtocol>> *)viewModels;
 - (void)updateTableViewWithSections: (NSArray<id<IDSectionCellViewModelProtocol>> *)sections;
 

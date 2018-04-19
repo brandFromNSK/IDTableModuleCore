@@ -11,7 +11,7 @@
 
 @protocol IDCellViewModelProtocol;
 
-@interface IDTestViewModel : NSObject
+@interface IDTestViewModel : NSObject <IDEntryFieldCellViewModelDelegate>
 
 @property (nonatomic, strong) NSArray<id<IDCellViewModelProtocol>> *cellViewModels;
 @property (nonatomic, strong) IDTestElementsModuleFactory *factory;

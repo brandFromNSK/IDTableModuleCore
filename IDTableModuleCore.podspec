@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Classes/*.{h,m}'
+  s.source_files = 'Classes/**/*.{h,m}'
   
   # s.resource_bundles = {
   #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
@@ -34,5 +34,6 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'ReactiveObjC', 'Masonry'
+  s.dependency 'ReactiveObjC'
+  s.dependency 'Masonry'
 end
