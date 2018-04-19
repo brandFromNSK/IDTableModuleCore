@@ -31,6 +31,8 @@ static CGFloat kDefaultSpaceBetweenElements = 32.f;
 @property (strong, nonatomic) NSArray <UIView *> *bottomSeparators;
 @property (strong, nonatomic) UILabel *bottomLabel;
 
+@property (strong, nonatomic) NSString *uniqueIdentifier;
+
 @end
 
 @implementation IDEntryFieldCell
@@ -60,8 +62,11 @@ static CGFloat kDefaultSpaceBetweenElements = 32.f;
 - (void)installViewModel:(IDEntryFieldCellViewModel *)viewModel {
     [super installViewModel:viewModel];
     
-    self.secondaryViewModelInstalling = _viewModel ? YES : NO;
-    self.viewModelUpdated = YES;
+    if (![self.uniqueIdentifier isEqualToString:viewModel.uniqueIdentifier]) {
+        self.uniqueIdentifier = viewModel.uniqueIdentifier;
+        self.secondaryViewModelInstalling = _viewModel ? YES : NO;
+        self.viewModelUpdated = YES;
+    }
 }
 
 - (Class)viewModelClass {

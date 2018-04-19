@@ -20,9 +20,7 @@
 @implementation IDEntryFieldCellViewModel
 
 - (NSString *)cellIdentifier {
-    return [NSString stringWithFormat:@"IDEntryFieldCell**%lu**%lu**",
-            (unsigned long)_fieldModels.count,
-            (unsigned long)_fieldModels.firstObject.entryFieldType];
+    return @"IDEntryFieldCell";
 }
 
 + (instancetype)viewModelWithFieldModel: (IDEntryFieldCellFieldModel *)fieldModel {
