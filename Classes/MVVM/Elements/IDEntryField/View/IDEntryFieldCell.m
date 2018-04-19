@@ -64,9 +64,10 @@ static CGFloat kDefaultSpaceBetweenElements = 32.f;
     
     if (![self.uniqueIdentifier isEqualToString:viewModel.uniqueIdentifier]) {
         self.uniqueIdentifier = viewModel.uniqueIdentifier;
-        self.secondaryViewModelInstalling = _viewModel ? YES : NO;
-        self.viewModelUpdated = YES;
     }
+    
+    self.secondaryViewModelInstalling = _viewModel ? YES : NO;
+    self.viewModelUpdated = YES;
 }
 
 - (Class)viewModelClass {
@@ -124,7 +125,10 @@ static CGFloat kDefaultSpaceBetweenElements = 32.f;
 #pragma mark - Private
 - (void)updateViewIfNeeded {
     
-    NSAssert(self.viewModel.fieldModels.count == self.entryFields.count, @"Why is different? May be cell reused wrong?");
+    if (self.uniqueIdentifier != nil && self.viewModel.uniqueIdentifier != nil) {
+        NSAssert([self.uniqueIdentifier isEqualToString:self.viewModel.uniqueIdentifier], @"Why is different? May be cell reused wrong?");
+    }
+
     
     if (_viewModel && self.viewModelUpdated) {
         
