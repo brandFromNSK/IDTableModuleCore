@@ -196,6 +196,7 @@
 		551F0CEE2086066200F3A443 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				55DFE0022088B6AF00C42170 /* NIBs */,
 				55DFDFD92087415F00C42170 /* IDTableModuleCoreMVVM.h */,
 				551F0D842086093400F3A443 /* JVFloatLabeledTextField_v1.2.1 */,
 				551F0D8E208609FF00F3A443 /* Categories */,
@@ -298,7 +299,6 @@
 			children = (
 				551F0D0E208606AF00F3A443 /* IDEmptyCell.h */,
 				551F0D0D208606AF00F3A443 /* IDEmptyCell.m */,
-				551F0D0F208606AF00F3A443 /* IDEmptyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -325,7 +325,6 @@
 			isa = PBXGroup;
 			children = (
 				551F0D1D208606AF00F3A443 /* IDInfoCell.h */,
-				551F0D1E208606AF00F3A443 /* IDInfoCell.xib */,
 				551F0D1F208606AF00F3A443 /* IDInfoCell.m */,
 			);
 			path = View;
@@ -353,7 +352,6 @@
 			isa = PBXGroup;
 			children = (
 				551F0D25208606AF00F3A443 /* IDRightSideDescriptionCell.h */,
-				551F0D26208606AF00F3A443 /* IDRightSideDescriptionCell.xib */,
 				551F0D27208606AF00F3A443 /* IDRightSideDescriptionCell.m */,
 			);
 			path = View;
@@ -536,6 +534,16 @@
 				55DFE0012088A04F00C42170 /* IDMutableSectionCellViewModelProtocol.h */,
 			);
 			path = SectionViewModel;
+			sourceTree = "<group>";
+		};
+		55DFE0022088B6AF00C42170 /* NIBs */ = {
+			isa = PBXGroup;
+			children = (
+				551F0D0F208606AF00F3A443 /* IDEmptyCell.xib */,
+				551F0D1E208606AF00F3A443 /* IDInfoCell.xib */,
+				551F0D26208606AF00F3A443 /* IDRightSideDescriptionCell.xib */,
+			);
+			path = NIBs;
 			sourceTree = "<group>";
 		};
 		60B25F54650F3AE2C789DF5A /* Frameworks */ = {

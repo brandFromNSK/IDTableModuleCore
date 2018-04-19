@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IDTableModuleCore'
-  s.version          = '0.0.5'
+  s.version          = '0.0.6'
   s.summary          = 'IDTableModuleCore created for easy module configuration based on UITableView'
 
 # This description is used to generate tags and improve search results.
@@ -27,7 +27,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'Classes/**/*.{h,m}'
-  s.resource_bundles = 'Classes/**/*.xib'
+  s.resource_bundles = {
+	'{podName}' => ['{podName}/Classes/NIBs/*.xib']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

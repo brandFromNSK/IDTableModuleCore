@@ -81,9 +81,9 @@ static const CGFloat kUITableViewDefaultRowHeight = 44.0f;
         if ([[NSBundle mainBundle] pathForResource:reusableIdentifier ofType:@"nib"] != nil) {
             UINib *cellNib = [UINib nibWithNibName:reusableIdentifier bundle:nil];
             
-            NSArray* nibViews = [[NSBundle mainBundle] loadNibNamed:reusableIdentifier
-                                                              owner:self
-                                                            options:nil];
+            NSArray* nibViews = [[NSBundle bundleForClass:cellClass] loadNibNamed:reusableIdentifier
+                                                                            owner:self
+                                                                          options:nil];
             
             if (nibViews.firstObject) {
                 [self.tableView registerNib:cellNib forCellReuseIdentifier:reusableIdentifier];
