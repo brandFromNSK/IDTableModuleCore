@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IDTableModuleCore'
-  s.version          = '0.0.2'
+  s.version          = '0.0.4'
   s.summary          = 'IDTableModuleCore created for easy module configuration based on UITableView'
 
 # This description is used to generate tags and improve search results.
@@ -24,13 +24,12 @@ Pod::Spec.new do |s|
   s.author           = { 'Andrey Bronnikov' => 'brand_nsk@mail.ru' }
   s.source           = { :git => 'https://github.com/improvedigital-ios/IDTableModuleCore.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'Classes/**/*.{h,m}'
-  
-  # s.resource_bundles = {
-  #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    '${POD_NAME}' => ['Classes/**/*.xib']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
