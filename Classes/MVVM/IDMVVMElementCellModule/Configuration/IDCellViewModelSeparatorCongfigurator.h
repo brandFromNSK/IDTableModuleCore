@@ -11,6 +11,8 @@
 
 @interface IDCellViewModelSeparatorCongfigurator : NSObject
 
++ (instancetype)default;
++ (instancetype)defaultWithInset;
 + (instancetype)configuratorWithColor: (UIColor *)color
                             leftInset: (CGFloat)leftInset
                            rightInset: (CGFloat)rightInset;

@@ -224,17 +224,9 @@
 				55DFDFFC208891F700C42170 /* CellViewModel */,
 				55DFDFFA208891AE00C42170 /* Configuration */,
 				55DFDFFB208891D300C42170 /* Protocols */,
-				551F0CF1208606AF00F3A443 /* ViewModel */,
 				551F0D01208606AF00F3A443 /* TableViewCell */,
 			);
 			path = IDMVVMElementCellModule;
-			sourceTree = "<group>";
-		};
-		551F0CF1208606AF00F3A443 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		551F0CF9208606AF00F3A443 /* Categories */ = {

@@ -10,6 +10,14 @@
 
 @implementation IDCellViewModelSeparatorCongfigurator
 
++ (instancetype)default {
+    return [self configuratorWithColor:[UIColor lightGrayColor] leftInset:0.f rightInset:0.f];
+}
+
++ (instancetype)defaultWithInset {
+    return [self configuratorWithColor:[UIColor lightGrayColor] leftInset:16.f rightInset:0.f];
+}
+
 + (instancetype)configuratorWithColor: (UIColor *)color
                             leftInset: (CGFloat)leftInset
                            rightInset: (CGFloat)rightInset {
