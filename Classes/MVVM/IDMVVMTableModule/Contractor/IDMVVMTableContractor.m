@@ -63,34 +63,34 @@ static const CGFloat kUITableViewDefaultRowHeight = 44.0f;
 }
 
 - (void)registerReusableCellWithCellViewModels:(NSArray<id<IDCellViewModelProtocol>> *)cellViewModels {
-
+    
     if( nil == cellViewModels ) {
         return;
     }
-
+    
     NSAssert(nil != self.tableView, @"Value of 'self.tableView' should never be nil");
-
+    
     NSArray<NSString *> *identifiers = [self uniqueIdentifiersFromViewModels:cellViewModels];
-
+    
     for( NSString *reusableIdentifier in identifiers ) {
-
+        
         NSArray *reusedStringArray = [reusableIdentifier componentsSeparatedByString:@"**"];
         Class cellClass = objc_getClass([reusedStringArray.firstObject cStringUsingEncoding:NSUTF8StringEncoding]);
         NSAssert(Nil != cellClass, @"Class for cell '%@' should be named exactly as ReusableID", reusableIdentifier);
         
-        if ([[NSBundle mainBundle] pathForResource:reusableIdentifier ofType:@"nib"] != nil) {
-            UINib *cellNib = [UINib nibWithNibName:reusableIdentifier bundle:nil];
-            
-            NSArray* nibViews = [[NSBundle bundleForClass:cellClass] loadNibNamed:reusableIdentifier
-                                                                            owner:self
-                                                                          options:nil];
-            
-            if (nibViews.firstObject) {
-                [self.tableView registerNib:cellNib forCellReuseIdentifier:reusableIdentifier];
-            }
-        }
-        else {
-            [self.tableView registerClass:cellClass forCellReuseIdentifier:reusableIdentifier];
+        NSBundle *bundle = [NSBundle bundleForClass:cellClass];
+        NSURL *url = [bundle.resourceURL URLByAppendingPathComponent:@"XIBs.bundle"];
+        NSBundle *resourceBundle = [NSBundle bundleWithURL:url];
+        NSBundle *bundleWhatWeUse = [resourceBundle pathForResource:reusableIdentifier ofType:@"nib"] != nil ? resourceBundle : bundle;
+        
+        UINib *cellNib = [UINib nibWithNibName:reusableIdentifier bundle:bundleWhatWeUse];
+        
+        NSArray* nibViews = [bundleWhatWeUse loadNibNamed:reusableIdentifier
+                                                    owner:self
+                                                  options:nil];
+        
+        if (nibViews.firstObject) {
+            [self.tableView registerNib:cellNib forCellReuseIdentifier:reusableIdentifier];
         }
     }
 }
