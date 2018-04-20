@@ -74,7 +74,8 @@ static const CGFloat kUITableViewDefaultRowHeight = 44.0f;
     
     for( NSString *reusableIdentifier in identifiers ) {
         
-        Class cellClass = objc_getClass([reusableIdentifier cStringUsingEncoding:NSUTF8StringEncoding]);
+        NSArray *reusedStringArray = [reusableIdentifier componentsSeparatedByString:@"**"];
+        Class cellClass = objc_getClass([reusedStringArray.firstObject cStringUsingEncoding:NSUTF8StringEncoding]);
         NSAssert(Nil != cellClass, @"Class for cell '%@' should be named exactly as ReusableID", reusableIdentifier);
         
         NSBundle *bundle = [NSBundle bundleForClass:cellClass];

@@ -31,8 +31,6 @@ static CGFloat kDefaultSpaceBetweenElements = 32.f;
 @property (strong, nonatomic) NSArray <UIView *> *bottomSeparators;
 @property (strong, nonatomic) UILabel *bottomLabel;
 
-@property (strong, nonatomic) NSString *uniqueIdentifier;
-
 @end
 
 @implementation IDEntryFieldCell
@@ -61,10 +59,6 @@ static CGFloat kDefaultSpaceBetweenElements = 32.f;
 #pragma mark - Override
 - (void)installViewModel:(IDEntryFieldCellViewModel *)viewModel {
     [super installViewModel:viewModel];
-    
-    if (![self.uniqueIdentifier isEqualToString:viewModel.uniqueIdentifier]) {
-        self.uniqueIdentifier = viewModel.uniqueIdentifier;
-    }
     
     self.secondaryViewModelInstalling = _viewModel ? YES : NO;
     self.viewModelUpdated = YES;
@@ -125,10 +119,7 @@ static CGFloat kDefaultSpaceBetweenElements = 32.f;
 #pragma mark - Private
 - (void)updateViewIfNeeded {
     
-    if (self.uniqueIdentifier != nil && self.viewModel.uniqueIdentifier != nil) {
-        NSAssert([self.uniqueIdentifier isEqualToString:self.viewModel.uniqueIdentifier], @"Why is different? May be cell reused wrong?");
-    }
-
+    NSAssert(self.viewModel.fieldModels.count == self.entryFields.count, @"Why is different? May be cell reused wrong?");
     
     if (_viewModel && self.viewModelUpdated) {
         
@@ -140,7 +131,11 @@ static CGFloat kDefaultSpaceBetweenElements = 32.f;
             entryField.placeholder = fieldModel.placeholder;
             entryField.editable = fieldModel.editable;
             entryField.showFloatingLabel = fieldModel.showFloatingLabel;
-            entryField.keyboardType = fieldModel.numericKeyboard ? UIKeyboardTypeASCIICapableNumberPad : UIKeyboardTypeDefault;
+            if (@available(iOS 10.0, *)) {
+                entryField.keyboardType = fieldModel.numericKeyboard ? UIKeyboardTypeASCIICapableNumberPad : UIKeyboardTypeDefault;
+            } else {
+                entryField.keyboardType = fieldModel.numericKeyboard ? UIKeyboardTypePhonePad : UIKeyboardTypeDefault;
+            }
             
             NSTextAlignment alignment = [self.viewModel textAlignmentWithPosition:self.viewModel.position];
             entryField.textAlignment = alignment;
@@ -443,7 +438,11 @@ shouldChangeTextInRange: (NSRange)range
     }
     else { // With pattern
         
-        entryField.keyboardType = UIKeyboardTypeASCIICapableNumberPad;
+        if (@available(iOS 10.0, *)) {
+            entryField.keyboardType = UIKeyboardTypeASCIICapableNumberPad;
+        } else {
+            entryField.keyboardType = UIKeyboardTypePhonePad;
+        }
         
         if ([self.viewModel singleDeleteForPatternedFieldWithText:previousValue range:range]) {
             changedString = [self.viewModel changedStringWithPatternHandling:changedString range:range];

@@ -36,8 +36,6 @@
 + (instancetype)viewModelWithFieldModels: (NSArray <IDEntryFieldCellFieldModel *> *)fieldModels;
 + (instancetype)viewModelWithValue: (NSString *)value keyPath: (NSString *)keyPath;
 
-@property (strong, nonatomic) NSString *uniqueIdentifier;
-
 @property (weak, nonatomic) id <IDEntryFieldCellViewModelDelegate> delegate;
 @property (strong, nonatomic, readonly) NSArray <IDEntryFieldCellFieldModel *> *fieldModels;
 

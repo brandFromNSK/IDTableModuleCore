@@ -11,6 +11,8 @@
 
 @interface IDEntryFieldCellViewModel ()
 
+@property (strong, nonatomic, readwrite) NSString *uniqueIdentifier;
+
 @property (strong, nonatomic, readwrite) RACSignal *valueSignal;
 @property (strong, nonatomic, readwrite) NSArray <IDEntryFieldCellFieldModel *> *fieldModels;
 @property (strong, nonatomic) NSString *descriptionText;
@@ -20,7 +22,9 @@
 @implementation IDEntryFieldCellViewModel
 
 - (NSString *)cellIdentifier {
-    return @"IDEntryFieldCell";
+    return [NSString stringWithFormat:@"IDEntryFieldCell**%lu**%lu**",
+            (unsigned long)_fieldModels.count,
+            (unsigned long)_fieldModels.firstObject.entryFieldType];
 }
 
 + (instancetype)viewModelWithFieldModel: (IDEntryFieldCellFieldModel *)fieldModel {
@@ -28,14 +32,10 @@
 }
 
 + (instancetype)viewModelWithFieldModels: (NSArray <IDEntryFieldCellFieldModel *> *)fieldModels {
-
-    if (self == [IDEntryFieldCellViewModel class]) {
-
-        IDEntryFieldCellViewModel *viewModel = [[IDEntryFieldCellViewModel alloc] init];
-        viewModel.fieldModels = fieldModels;
-        return viewModel;
-    }
-    return nil;
+    
+    IDEntryFieldCellViewModel *viewModel = [[IDEntryFieldCellViewModel alloc] init];
+    viewModel.fieldModels = fieldModels;
+    return viewModel;
 }
 
 + (instancetype)viewModelWithValue: (NSString *)value keyPath: (NSString *)keyPath {
@@ -70,6 +70,7 @@ static CGFloat const kDefaultLeftInset = 20.0f;
 static CGFloat const kDefaultRightInset = 20.0f;
 - (void)initializeDefaultProperties {
 
+    _uniqueIdentifier = [[NSUUID UUID] UUIDString];
     _backgroundColor = [UIColor clearColor];
     _contentInsets = UIEdgeInsetsMake(0, kDefaultLeftInset, 0, kDefaultRightInset);
     _manualValidation = NO;
